@@ -2,9 +2,8 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ミセキテン | 地域店舗の集客導線を、まるごと整える",
-  description:
-    "ホームページ、Googleマップ、LINE導入まで。小さなお店の見つかる・伝わる・来店されるを支援する地域店舗向けWeb集客支援サービスです。",
+  title: "ミセキテン | 準備中",
+  description: "ミセキテンのホームページは、内容調整のため一時的に公開を停止しています。",
 };
 
 export const viewport: Viewport = {
