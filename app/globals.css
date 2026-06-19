@@ -2,13 +2,12 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #17211f;
-  --muted: #64716d;
-  --line: #dce7e3;
-  --accent: #0f8f7a;
-  --accent-dark: #0a665b;
-  --accent-soft: #e9f7f3;
-  --warm: #f7f3ec;
+  --foreground: #111827;
+  --muted: #52605d;
+  --line: #d9e3df;
+  --green: #166534;
+  --teal: #14b8a6;
+  --coral: #f97360;
 }
 
 * {
@@ -23,9 +22,10 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-family: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   letter-spacing: 0;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -35,11 +35,61 @@ a {
 
 button,
 input,
+select,
 textarea {
   font: inherit;
 }
 
 ::selection {
-  background: #b9eadf;
-  color: #10201d;
+  background: #b8e7dc;
+  color: #0f3b34;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  margin-top: 0.55rem;
+  border: 1px solid #cfdad6;
+  border-radius: 0;
+  background: #ffffff;
+  padding: 0.85rem 0.95rem;
+  color: #111827;
+  font-size: 1rem;
+  line-height: 1.5;
+  outline: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.form-control::placeholder {
+  color: #9ca3af;
+}
+
+.form-control:focus {
+  border-color: #166534;
+  box-shadow: 0 0 0 3px rgb(22 101 52 / 12%);
+}
+
+@media (max-width: 640px) {
+  h1,
+  h2,
+  h3 {
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  button,
+  a {
+    overflow-wrap: normal;
+    word-break: keep-all;
+  }
+
+  p,
+  li,
+  summary {
+    overflow-wrap: anywhere;
+  }
 }
