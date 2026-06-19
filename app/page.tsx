@@ -149,6 +149,7 @@ export default function Home() {
             <Brand />
           </a>
           <nav className="hidden items-center gap-8 text-sm font-bold text-[#33413b] lg:flex" aria-label="メインナビゲーション">
+            <a href="#about" className="transition hover:text-[#174e3a]">ミセキテンについて</a>
             <a href="#services" className="transition hover:text-[#174e3a]">サービス</a>
             <a href="#strengths" className="transition hover:text-[#174e3a]">選ばれる理由</a>
             <a href="#price" className="transition hover:text-[#174e3a]">料金</a>
@@ -170,6 +171,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-[1440px] md:min-h-[560px] md:grid-cols-[48%_52%]">
           <div className="flex items-center px-5 py-10 sm:px-8 md:px-10 lg:px-[clamp(3rem,6vw,6.5rem)]">
             <div className="max-w-[610px]">
+              <p className="mb-4 text-sm font-bold text-[#176b50]">地域店舗支援サービス ミセキテン <span className="font-semibold text-[#65736d]">misekiten</span></p>
               <h1 className="text-[38px] font-extrabold leading-[1.2] text-[#17221e] sm:text-[48px] lg:text-[62px]">
                 <span className="block">小規模店舗の</span>
                 <span className="block">集客と業務を、</span>
@@ -224,6 +226,37 @@ export default function Home() {
               {index < 3 ? <ArrowRight size={17} className="absolute -right-2 hidden text-[#8ea099] md:block" aria-hidden="true" /> : null}
             </div>
           ))}
+        </div>
+      </section>
+
+      <section id="about" className="border-b border-[#dce5e0] px-5 py-14 md:py-20">
+        <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16">
+          <div>
+            <p className="text-sm font-bold text-[#176b50]">ABOUT MISEKITEN</p>
+            <h2 className="mt-3 text-[30px] font-extrabold leading-[1.35] md:text-[42px]">ミセキテンとは</h2>
+          </div>
+          <div>
+            <p className="text-base leading-8 text-[#405048] md:text-lg md:leading-9">
+              ミセキテン（misekiten）は、従業員1〜20名ほどの地域店舗・個人事業者に向けた、集客導線と店舗業務の改善支援サービスです。
+            </p>
+            <p className="mt-4 text-sm leading-7 text-[#52635b] md:text-base md:leading-8">
+              Googleマップ、ホームページ、LINE、口コミを来店につなげる流れと、新人教育、情報共有、日報などの現場運用を一緒に整理します。単なる制作代行ではなく、地域店舗のデジタル担当者として、必要なところから実行と改善を伴走します。
+            </p>
+            <dl className="mt-7 grid gap-px border border-[#dce5e0] bg-[#dce5e0] sm:grid-cols-3">
+              <div className="bg-white p-5">
+                <dt className="text-xs font-bold text-[#65736d]">対象</dt>
+                <dd className="mt-2 font-bold">地域の小規模店舗</dd>
+              </div>
+              <div className="bg-white p-5">
+                <dt className="text-xs font-bold text-[#65736d]">支援範囲</dt>
+                <dd className="mt-2 font-bold">集客導線・業務改善</dd>
+              </div>
+              <div className="bg-white p-5">
+                <dt className="text-xs font-bold text-[#65736d]">対応</dt>
+                <dd className="mt-2 font-bold">オンライン全国対応</dd>
+              </div>
+            </dl>
+          </div>
         </div>
       </section>
 

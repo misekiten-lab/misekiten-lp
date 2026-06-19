@@ -2,12 +2,13 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 const siteUrl = "https://misekiten.jp";
-const siteTitle = "ミセキテン | 小規模店舗の集客と業務を、まとめて整える";
+const siteTitle = "ミセキテン（misekiten）| 小規模店舗の集客と業務改善";
 const siteDescription =
-  "Googleマップ、LINE、ホームページの集客導線から、新人教育マニュアル、タイミー受け入れ、店舗業務の仕組み化まで支援します。";
+  "ミセキテンは、小規模店舗のGoogleマップ、ホームページ、LINEによる集客導線と、新人教育や店舗業務の仕組み化をまとめて支援します。";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  applicationName: "ミセキテン",
   title: siteTitle,
   description: siteDescription,
   verification: {
@@ -61,22 +62,44 @@ export default function RootLayout({
 }>) {
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    name: "ミセキテン",
-    url: siteUrl,
-    description: siteDescription,
-    telephone: "+81-90-9982-3996",
-    email: "misekiten@gmail.com",
-    areaServed: {
-      "@type": "Country",
-      name: "日本",
-    },
-    serviceType: [
-      "ホームページ制作・改善",
-      "Googleマップ・MEO支援",
-      "LINE公式アカウント導入支援",
-      "店舗業務の仕組み化",
-      "AI活用支援",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": `${siteUrl}/#website`,
+        url: `${siteUrl}/`,
+        name: "ミセキテン",
+        alternateName: ["misekiten", "misekiten.jp"],
+        description: siteDescription,
+        inLanguage: "ja",
+        publisher: {
+          "@id": `${siteUrl}/#business`,
+        },
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": `${siteUrl}/#business`,
+        name: "ミセキテン",
+        alternateName: "misekiten",
+        url: `${siteUrl}/`,
+        description: siteDescription,
+        telephone: "+81-90-9982-3996",
+        email: "misekiten@gmail.com",
+        founder: {
+          "@type": "Person",
+          name: "小野 一真",
+        },
+        areaServed: {
+          "@type": "Country",
+          name: "日本",
+        },
+        serviceType: [
+          "ホームページ制作・改善",
+          "Googleマップ・MEO支援",
+          "LINE公式アカウント導入支援",
+          "店舗業務の仕組み化",
+          "AI活用支援",
+        ],
+      },
     ],
   };
 
